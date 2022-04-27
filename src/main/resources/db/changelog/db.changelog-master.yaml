@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/create_table_user.xml
+  - include:
+      file: db/changelog/create_table_product.xml

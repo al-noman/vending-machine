@@ -1,0 +1,21 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+    <changeSet id="create table for products" author="abdullah">
+        <createTable tableName="PRODUCT">
+            <column name="ID" type="UUID">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="AMOUNT_AVAILABLE" type="INT4" defaultValue="0" />
+            <column name="COST" type="INT4" defaultValue="0" />
+            <column name="PRODUCT_NAME" type="VARCHAR(50)">
+                <constraints nullable="false" />
+            </column>
+            <column name="SELLER" type="UUID">
+                <constraints nullable="false" foreignKeyName="fk_user_id" references="USER(ID)" deleteCascade="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

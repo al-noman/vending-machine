@@ -1,0 +1,14 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:file:/Users/alnomaab/development/vending-machine/src/main/resources/data/vendingMachine;AUTO_SERVER=true
+    driver-class-name: org.h2.Driver
+    username: mvp
+    password: mvp
+
+jwt:
+  signing:
+    secret:
+      key: cf07c958-53ef-4355-bbe6-ce9f25a1274d
