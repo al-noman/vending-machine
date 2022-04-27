@@ -3,7 +3,7 @@ spring:
     console:
       enabled: true
   datasource:
-    url: jdbc:h2:file:/Users/alnomaab/development/vending-machine/src/main/resources/data/vendingMachine;AUTO_SERVER=true
+    url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
     username: mvp
     password: mvp
